@@ -77,7 +77,7 @@ public class JavaUrlHttpCommandExecutorService extends BaseHttpCommandExecutorSe
          DelegatingErrorHandler errorHandler, HttpWire wire, @Named("untrusted") HostnameVerifier verifier,
          @Named("untrusted") Supplier<SSLContext> untrustedSSLContextProvider, Function<URI, Proxy> proxyForURI,
          @Named(PROPERTY_IDEMPOTENT_METHODS) String idempotentMethods,
-	 @Named(PROPERTY_USER_AGENT) String userAgent) {
+         @Named(PROPERTY_USER_AGENT) String userAgent) {
       super(utils, contentMetadataCodec, retryHandler, ioRetryHandler, errorHandler, wire, idempotentMethods);
       if (utils.getMaxConnections() > 0) {
          System.setProperty("http.maxConnections", String.valueOf(checkNotNull(utils, "utils").getMaxConnections()));

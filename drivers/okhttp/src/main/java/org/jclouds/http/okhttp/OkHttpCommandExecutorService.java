@@ -68,7 +68,7 @@ public final class OkHttpCommandExecutorService extends BaseHttpCommandExecutorS
          DelegatingRetryHandler retryHandler, IOExceptionRetryHandler ioRetryHandler,
          DelegatingErrorHandler errorHandler, HttpWire wire, Function<URI, Proxy> proxyForURI, OkHttpClient okHttpClient,
          @Named(PROPERTY_IDEMPOTENT_METHODS) String idempotentMethods,
-	 @Named(PROPERTY_USER_AGENT) String userAgent) {
+         @Named(PROPERTY_USER_AGENT) String userAgent) {
       super(utils, contentMetadataCodec, retryHandler, ioRetryHandler, errorHandler, wire, idempotentMethods);
       this.proxyForURI = proxyForURI;
       this.globalClient = okHttpClient;

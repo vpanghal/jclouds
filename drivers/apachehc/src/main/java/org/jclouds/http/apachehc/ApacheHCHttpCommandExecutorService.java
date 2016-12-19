@@ -63,7 +63,7 @@ public class ApacheHCHttpCommandExecutorService extends BaseHttpCommandExecutorS
          DelegatingRetryHandler retryHandler, IOExceptionRetryHandler ioRetryHandler,
          DelegatingErrorHandler errorHandler, HttpWire wire, HttpClient client,
          @Named(PROPERTY_IDEMPOTENT_METHODS) String idempotentMethods,
-	 @Named(PROPERTY_USER_AGENT) String userAgent) {
+         @Named(PROPERTY_USER_AGENT) String userAgent) {
       super(utils, contentMetadataCodec, retryHandler, ioRetryHandler, errorHandler, wire, idempotentMethods);
       this.client = client;
       this.apacheHCUtils = new ApacheHCUtils(contentMetadataCodec);
